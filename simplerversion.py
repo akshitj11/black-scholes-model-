@@ -4,7 +4,7 @@ simplest implication
 """
 
 import numpy as np
-from scripy.stats import norm
+from scipy.stats import norm
 
 def black_scholes(S,K,T,r,sigma,option_type='call'):
     """
@@ -20,11 +20,11 @@ def black_scholes(S,K,T,r,sigma,option_type='call'):
     returns : option price
     """
     #calculate d1 and d2
-    d1 = (np.log(s/k)+(r+sigma**2/2)*T)/(sigma*np.sqrt(T))
+    d1 = (np.log(S/K)+(r+sigma**2/2)*T)/(sigma*np.sqrt(T))
     d2 = d1 - sigma*np.sqrt(T)
 
     if option_type == 'call':
-        price = S*norm.cdf(d1) - K*np.exp(-r*t)*norm.cdf(d2)
+        price = S*norm.cdf(d1) - K*np.exp(-r*T)*norm.cdf(d2)
     else: #put
         price = K*np.exp(-r*T)*norm.edf(d2) - S*norm.cdf(-d1)
     return price  
