@@ -2,7 +2,7 @@
 
 A Python implementation of the Black-Scholes model for pricing European call and put options. This repository provides multiple implementations ranging from simple to advanced, along with visualizations and educational resources.
 
-## 🎯 Overview
+##  Overview
 
 The Black-Scholes model, developed by Fischer Black, Myron Scholes, and Robert Merton in 1973, revolutionized options pricing by providing a mathematical framework for calculating the theoretical price of European options. This implementation includes:
 
